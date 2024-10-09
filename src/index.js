@@ -7,7 +7,7 @@ const api = require('./api/api-Entry')
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('api', api)
+app.use('/api', api)
 
 app.get('/', (res, req) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
